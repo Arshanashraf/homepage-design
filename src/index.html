@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>Responsive Tailwind Project</title>
+  <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-400 text-gray-900 p-0 m-0 overflow-x-hidden">
+    <header class="bg-white shadow w-full">
+        <nav class="px-0 w-full  md:px-16 sm:px-2 xs:px-1 2xs:px-0">
+          <div class="container mx-auto px-14 md:px-1 md:mx-2 flex items-start justify-between py-5 xs:px-0 2xs:px-2 2xs:mx-0">
+            <div class="flex items-center space-x-4 -mt-1 md:mr-4 sm:mr-10 2xs:mr-10">
+              <a href="" class="flex items-center text-blue-300 text-3xl font-bold">
+                <img src="/src/assets/images/logo/logo.png" class="w-12 mr-1" alt="">Brand</a>
+            </div>
+    
+            <div class="flex flex-1 items-center mx-4 md:mx-10 ">
+              <input type="text" placeholder="Search"
+              class="flex-1 w-auto  border border-blue-400 rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+              <select class="border-t border-b border-y-8 border-blue-400 px-2 py-2 focus:outline-none xs:hidden 2xs:hidden">
+                <option >All category</option>
+                <option >Electronics</option>
+                <option >Fashion</option>
+              </select>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded-r-md">Search</button>
+            </div>
+    
+            <div class="flex  items-center space-x-6 mz-auto sm:hidden xs:hidden 2xs:hidden">
+              <a href="" class="flex flex-col items-center text-gray-400 "><i class="fa-solid fa-user w-5  mr-1 md:pt-2 md:text-2xl "></i><p class="md:hidden">Profile</p></a>
+              <a href="#" class="flex flex-col items-center text-gray-400 md:hidden"><i class="fa-solid fa-message w-5  mr-1 "></i><p>Message</p></a>
+              <a href="" class="flex flex-col items-center text-gray-400 md:hidden"><i class="fa-solid fa-heart w-5 mr-1 "></i><p>Orders</p></a>
+              <a href="" class="flex flex-col items-center text-gray-400"><i class="fa-solid fa-cart-shopping w-5  mr-1 md:pt-2 md:text-2xl"></i><p class="md:hidden">My cart</p></a>
+            </div>
+    
+          </div>
+        </nav>
+        <nav class="border-t  border-black w-full px-0">
+            <div class="container mx-auto px-14  md:px-0 flex items-start justify-between py-5 xs:px-0 2xs:px-2 2xs:mx-0">
+              <a href="#" class="flex items-center font-semibold "><i class="fa-solid fa-bars w-5 h-5 mr-1 pt-0.5"></i><p>All category</p></a>
+      
+              <ul class="flex flex-1 w-auto items-center ml-6 space-x-4 sm:hidden xs:hidden 2xs:hidden">
+                <li><a href="#" >Hot Offers</a></li>
+                <li><a href="#">Gift boxes</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Menu items</a></li>
+                <li><select >
+                  <option >Help</option>
+                </select></li>
+              </ul>
+              <div class="flex items-center md:ml-2 flex-wrap space-x-2 ">
+                <select >
+                  <option >English, USD</option>
+                  <option >Deutsch</option>
+                </select>
+                <button class="flex ">
+                  <span>Ship to</span>
+                  <img src="/src/assets/images/flags/ger.jpeg" class="w-5 ml-1 pt-1.5" alt="">
+                  <select ></select>
+                </button>
+              </div>
+            </div>
+            
+          </nav>
+
+    </header>
+
+
+    <main>
+        <section class="mx-24 mt-6 rounded-lg p-5 bg-white">
+            <div class="row flex">
+                <div class="col-3 flex flex-col space-y-1">
+                    <a href="#" class="bg-blue-100 font-semibold pr-32 pl-3 py-2 rounded-lg">Automobiles</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Clothes and wear</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Home interiors</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Computer and tech</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Tools, equipments</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Sports and outdoor</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Animal and pets</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">Machinery tools</a>
+                    <a href="#" class="  pr-28 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">More category</a>
+                </div>
+                <div class="col-5 px-2 ">
+                    <img src="/src/assets/images/mainbg/mainbg.png" style="width: 650px; height: 390px;"  alt="">
+                </div>
+                <div class="col-4 w-60 ">
+                    <div class="p-3 bg-blue-100 w-full rounded-lg">
+                        <div class="flex flex-row">
+                            <img src="/src/assets/images/mainbg/avatar.webp" alt="" class="w-10"><p class="px-2 font-semibold">Hi, user <br>let's get started</p>
+                        </div>
+                        <div class="flex flex-col space-y-2 mt-3">
+                            <button class="bg-blue-600 text-white rounded-lg py-1.5">Join now</button>
+                            <button class="bg-white text-blue-600 rounded-lg py-1.5">log in</button>
+                        </div>
+                    </div>
+                    <div class="bg-orange-500 p-4 rounded-lg mt-2">
+                        <h1 class="text-white">GET US 10$ off <br> with a new <br>supplier</h1>
+                    </div>
+                    <div class="bg-teal-400 p-4 rounded-lg mt-2">
+                        <h1 class="text-white">Send quotes with<br> supplier<br>prefrences</h1>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
