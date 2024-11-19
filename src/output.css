@@ -1351,6 +1351,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-gray-400 {
+  --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .shadow-gray-500 {
   --tw-shadow-color: #6b7280;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1374,6 +1379,16 @@ video {
 .shadow-teal-600 {
   --tw-shadow-color: #0d9488;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:bg-blue-100:hover {
@@ -1901,11 +1916,6 @@ video {
 
   .xl\:items-center {
     align-items: center;
-  }
-
-  .xl\:bg-gray-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
   }
 
   .xl\:pr-0 {
