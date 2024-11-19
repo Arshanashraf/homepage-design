@@ -7,7 +7,7 @@
   <title>Responsive Tailwind Project</title>
   <link href="/src/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-400 text-gray-900 p-0 m-0 overflow-x-hidden">
+<body class="bg-gray-200 text-gray-900 p-0 m-0 overflow-x-hidden">
     <header class="bg-white shadow w-full 2xs:pb-2">
         <nav class="px-0 w-full  md:px-16 sm:px-2 xs:px-1 2xs:px-0">
           <div class="container mx-auto px-14 md:px-1 md:mx-2 flex items-start justify-between py-5 xs:px-0 2xs:px-2 2xs:mx-0 2xs:space-x-20">
@@ -28,7 +28,7 @@
             </div>
     
             <div class="flex  items-center space-x-6 mz-auto sm:hidden xs:hidden ">
-              <a href="" class="flex flex-col items-center text-gray-400 "><i class="fa-solid fa-user w-5  mr-1 md:pt-2 md:text-2xl 2xs:pt-2 2xs:text-2xl"></i><p class="md:hidden 2xs:hidden">Profile</p></a>
+              <a href="" class="flex flex-col items-center text-gray-400 "><i class="fa-solid fa-user w-5  mr-1 md:pt-2 md:text-xl 2xs:pt-2 2xs:text-2xl"></i><p class="md:hidden 2xs:hidden">Profile</p></a>
               <a href="#" class="flex flex-col items-center text-gray-400 md:hidden 2xs:hidden"><i class="fa-solid fa-message w-5  mr-1 "></i><p>Message</p></a>
               <a href="" class="flex flex-col items-center text-gray-400 md:hidden 2xs:hidden"><i class="fa-solid fa-heart w-5 mr-1 "></i><p>Orders</p></a>
               <a href="" class="flex flex-col items-center text-gray-400"><i class="fa-solid fa-cart-shopping w-5  mr-1 md:pt-2 md:text-2xl 2xs:pt-2 2xs:text-2xl"></i><p class="md:hidden 2xs:hidden">My cart</p></a>
@@ -48,7 +48,23 @@
         </nav>
         <nav class="border-t  border-black w-full px-0 2xs:hidden">
             <div class="container mx-auto px-14  md:px-0 flex items-start justify-between py-5 xs:px-0 2xs:px-2 2xs:mx-0">
-              <a href="#" class="flex items-center font-semibold "><i class="fa-solid fa-bars w-5 h-5 mr-1 pt-0.5"></i><p>All category</p></a>
+              <a href="#" class="relative flex items-center font-semibold "><button 
+                id="menu-toggle" 
+                class="block  text focus:outline-none">
+                <i class="fas fa-bars"></i>
+              </button><p class="pl-1.5">All category</p></a>
+              <nav 
+      id="menu" 
+      class=" absolute flex  flex-col  space-y-2  mt-8 shadow-lg rounded-lg shadow-gray-600  bg-white ">
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Automobiles</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Clothes amd wear</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Home interiors</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Tools, equipments</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Sports and outdoor</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Animal and pets</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">Machinery tools</a>
+      <a href="#" class="hover:bg-blue-100 px-3 py-1">More categories</a>
+    </nav>
       
               <ul class="flex flex-1 w-auto items-center ml-6 space-x-4 sm:hidden xs:hidden 2xs:hidden">
                 <li><a href="#" >Hot Offers</a></li>
@@ -67,18 +83,19 @@
                 <button class="flex ">
                   <span>Ship to</span>
                   <img src="/src/assets/images/flags/ger.jpeg" class="w-5 ml-1 pt-1.5" alt="">
-                  <select ></select>
+                  <select >
+                  </select>
                 </button>
               </div>
             </div>
             
           </nav>
-
+          
     </header>
-
+    
 
     <main>
-        <section class="mx-24 mt-6 rounded-md p-5 bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-0 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none ">
+        <section class="mx-24 mt-6 rounded-md p-5 bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-0 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none border border-gray-400 shadow-md shadow-gray-500">
             <div class="row flex">
                 <div class="col-3 flex flex-col space-y-1 sm:hidden xs:hidden 2xs:hidden">
                     <a href="#" class="bg-blue-100 font-semibold pr-32 md:pr-10 sm:pr-10 pl-3 py-2 rounded-lg">Automobiles</a>
@@ -92,10 +109,10 @@
                     <a href="#" class="  pr-0 hover:bg-blue-100 text-gray-700 pl-3 py-2 rounded-lg">More category</a>
                 </div>
                 <div class="col-5 px-2 xs:px-0 xs:w-full  2xs:px-0   2xs:w-full">
-                    <img src="/src/assets/images/mainbg/mainbg.png" class="h-96 xs:h-60 2xs:h-60" style="width: 650px; "  alt="">
+                    <img src="/src/assets/images/mainbg/mainbg.png" class="h-96 xs:h-60 2xs:h-60 shadow-md shadow-gray-300" style="width: 650px; "  alt="">
                 </div>
                 <div class="col-4 w-60 xs:hidden 2xs:hidden">
-                    <div class="p-3 bg-blue-100 w-full rounded-lg">
+                    <div class="p-3 bg-blue-100 shadow-md shadow-blue-200 w-full rounded-lg">
                         <div class="flex flex-row">
                             <img src="/src/assets/images/mainbg/avatar.webp" alt="" class="w-10"><p class="px-2 font-semibold">Hi, user <br>let's get started</p>
                         </div>
@@ -104,10 +121,10 @@
                             <button class="bg-white text-blue-600 rounded-lg py-1.5">log in</button>
                         </div>
                     </div>
-                    <div class="bg-orange-500 p-4 rounded-lg mt-2">
+                    <div class="bg-orange-500 p-4 rounded-lg mt-2 shadow-md shadow-orange-700">
                         <h1 class="text-white">GET US 10$ off <br> with a new <br>supplier</h1>
                     </div>
-                    <div class="bg-teal-400 p-4 rounded-lg mt-2">
+                    <div class="bg-teal-400 p-4 rounded-lg shadow-md shadow-teal-600 mt-2">
                         <h1 class="text-white">Send quotes with<br> supplier<br>prefrences</h1>
                     </div>
                 </div>
@@ -115,7 +132,7 @@
 
         </section>
         <section class="mx-24 mt-6 rounded-md  bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none border-2 border-gray-400">
-            <div class="row flex xs:flex-col sm:flex-col 2xs:flex-col">
+            <div class="row flex  xs:flex-col sm:flex-col 2xs:flex-col">
                 <div class="col-lg-2 flex flex-col  border-r p-5 border-gray-400 xs:flex-row xs:space-x-14 sm:flex-row sm:space-x-40 sm:border-b xs:border-b 2xs:flex-row 2xs:space-x-6 2xs:border-b 2xs:p-2">
                     <div class="-space-y-1 xs:-space-y-0 xs:pt-4 2xs:-space-y-0 2xs:pt-4 sm:pt-4">
                         <h1 class="text-xl font-bold 2xs:text-lg">Deals and offers</h1>
@@ -143,36 +160,36 @@
                     </div>
                     
                 </div>
-                <div class="flex sm:flex sm:flex-row">
-                    <div class="col-lg-2 border-r p-5 border-gray-400 ">
+                <div class="flex 2xs:flex-wrap 2xs:mx-14 2xs:mt-4 2xs:gap-6  xs:flex-wrap xs:mx-14 xs:mt-4 xs:gap-6 sm:flex sm:flex-row">
+                    <div class="col-lg-2 border-r xs:rounded-md xs:border 2xs:rounded-md 2xs:border p-5 border-gray-400 ">
                         <div class=" flex flex-col items-center text-center">
                             <img src="/src/assets/images/section2/smartWatch.png" alt="" class="w-36">
                             <h1 class="font-semibold ">Smart watches</h1>
                             <p class="bg-pink-200 px-3 text-red-600 font-semibold text-sm py-1 rounded-2xl">-25%</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 border-r p-5 border-gray-400">
+                    <div class="col-lg-2 border-r 2xs:rounded-md 2xs:border xs:rounded-md  xs:border p-5 border-gray-400">
                         <div class=" flex flex-col items-center text-center">
                             <img src="/src/assets/images/section2/laptop.png" alt="" class="w-36">
                             <h1 class="font-semibold">Laptops</h1>
                             <p class="bg-pink-200 px-3 text-red-600 font-semibold text-sm py-1 rounded-2xl">-15%</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 border-r p-5 border-gray-400">
+                    <div class="col-lg-2 border-r 2xs:rounded-md 2xs:border xs:rounded-md  xs:border p-5 border-gray-400">
                         <div class=" flex flex-col items-center text-center">
                             <img src="/src/assets/images/section2/goproCamera.png" alt="" class="w-36">
                             <h1 class="font-semibold">GoPro Cameras</h1>
                             <p class="bg-pink-200 px-3 text-red-600 font-semibold text-sm py-1 rounded-2xl">-40%</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 border-r p-5 border-gray-400">
+                    <div class="col-lg-2 border-r 2xs:rounded-md 2xs:border xs:rounded-md xs:border  p-5 border-gray-400">
                         <div class=" flex flex-col items-center text-center">
                             <img src="/src/assets/images/section2/headphones.png" alt="" class="w-36">
                             <h1 class="font-semibold">Headphones</h1>
                             <p class="bg-pink-200 px-3 text-red-600 font-semibold text-sm py-1 rounded-2xl">-25%</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 border-r p-5 border-gray-400 md:hidden">
+                    <div class="col-lg-2 border-r 2xs:rounded-md 2xs:border xs:rounded-md xs:border p-5 border-gray-400 md:hidden">
                         <div class=" flex flex-col items-center text-center">
                             <img src="/src/assets/images/section2/canonCameras.png" alt="" class="w-36">
                             <h1 class="font-semibold">Canon Cameras</h1>
@@ -185,16 +202,16 @@
         </section>
 
         <section class="mx-24 mt-6 rounded-md  bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none border border-gray-400">
-            <div class="row flex xs:flex-col sm:flex-col 2xs:flex-col">
+            <div class="row flex  xs:flex-col sm:flex-col 2xs:flex-col">
                 <div class="p-5 font-bold border border-gray-400 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Home and outdoor</div>
-                <div class="col1 bg-cover p-5 h-56 xs:hidden sm:hidden 2xs:hidden" style="background: url(/src/assets/images/section3/bgImg.jpeg); background-repeat: no-repeat;width: 470px;">
-                    <div >
+                <div class="col1  bg-cover p-5 h-56 xs:hidden sm:hidden 2xs:hidden" style="background: url(/src/assets/images/section3/bgImg.jpeg); background-repeat: no-repeat;width: 470px;">
+                    <div class="xl:text-center xl:items-center">
                         <h1 class=" font-bold text-xl mb-6">Home and <br>outdoor </h1>
                         <a href="#" class="px-4 py-2 bg-white rounded-md font-semibold">Source now</a>
                     </div>
                 </div>
                 <div class="col2  flex flex-wrap 2xs:flex-nowrap xs:flex-nowrap">
-                    <div class="col1 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col1 flex  px-5 pt-5 border bg-white border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Soft chairs</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -203,7 +220,7 @@
                             <img src="/src/assets/images/section3/softChairs.png" alt="" class="w-14 2xs:w-20 xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col2 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col2 flex  px-5 pt-5 border bg-white border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Sofa & chairs</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -212,7 +229,7 @@
                             <img src="/src/assets/images/section3/lamp.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col3 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col3 flex  px-5 pt-5 border bg-white border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Kitchen Dishes</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -221,7 +238,7 @@
                             <img src="/src/assets/images/section3/bed.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col4 flex  px-5 pt-5 border border-gray-400  xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse 2xs:flex-col-reverse">
+                    <div class="col4 flex  px-5 pt-5 border bg-white border-gray-400  xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse 2xs:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Smart Watches</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden 2xs:hidden">USD 19</p>
@@ -230,7 +247,7 @@
                             <img src="/src/assets/images/section3/pot.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col5 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col5 flex  px-5 pt-5 border bg-white border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">KItchen mixer</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 100</p>
@@ -239,7 +256,7 @@
                             <img src="/src/assets/images/section3/kitchen.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col6 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col6 flex  px-5 pt-5 border bg-white border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div class="pr-1">
                             <h1 class="font-semibold">Blenders</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -248,7 +265,7 @@
                             <img src="/src/assets/images/section3/blender.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col7 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col7 flex  px-5 pt-5 border bg-white border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">Home appliances</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -257,7 +274,7 @@
                             <img src="/src/assets/images/section3/appliancees.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col8 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col8 flex  px-5 pt-5 border bg-white border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">Coffee makes</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 10</p>
@@ -267,11 +284,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-5 font-bold border border-gray-400 text-blue-600 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Source now &#8594;</div>
+                <div class="p-5 font-bold border bg-white border-gray-400 text-blue-600 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Source now &#8594;</div>
             </div>
         </section>
 
-        <section class="mx-24 mt-6 rounded-md  bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none border border-gray-400">
+        <section class="mx-24 mt-6 rounded-md   bg-white xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-0 2xs:p-0 2xs:bg-none border border-gray-400">
             <div class="row flex xs:flex-col sm:flex-col 2xs:flex-col">
                 <div class="p-5 font-bold border border-gray-400 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Consumer electronics and gadgets</div>
                 <div class="col1 bg-cover p-5 h-56 xs:hidden sm:hidden 2xs:hidden" style="background: url(/src/assets/images/section4/mainbg.webp); background-repeat: no-repeat;width: 470px;">
@@ -281,7 +298,7 @@
                     </div>
                 </div>
                 <div class="col2  flex flex-wrap 2xs:flex-nowrap xs:flex-nowrap">
-                    <div class="col1 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col1 flex  px-5 pt-5 border border-gray-400 bg-white xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Smart Watches</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -290,7 +307,7 @@
                             <img src="/src/assets/images/section4/smartWatch.png" alt="" class="w-14 2xs:w-20 xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col2 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col2 flex  px-5 pt-5 border border-gray-400 bg-white xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Camera</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 89</p>
@@ -299,7 +316,7 @@
                             <img src="/src/assets/images/section4/goproCamera.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col3 flex  px-5 pt-5 border border-gray-400 xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+                    <div class="col3 flex  px-5 pt-5 border border-gray-400 bg-white xs:flex-col-reverse 2xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Headphones</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden 2xs:hidden sm:hidden md:hidden">USD 10</p>
@@ -308,7 +325,7 @@
                             <img src="/src/assets/images/section4/headphone2.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col4 flex  px-5 pt-5 border border-gray-400  xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse 2xs:flex-col-reverse">
+                    <div class="col4 flex  px-5 pt-5 border border-gray-400 bg-white  xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse 2xs:flex-col-reverse">
                         <div>
                             <h1 class="font-semibold">Smart Watches</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden 2xs:hidden">USD 90</p>
@@ -317,7 +334,7 @@
                             <img src="/src/assets/images/section4/kettle.png" alt="" class="w-14 xs:w-20 2xs:w-20 sm:w-20 md:w-20">
                         </div>
                     </div>
-                    <div class="col5 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col5 flex  px-5 pt-5 border border-gray-400 bg-white xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">Gaming set</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 35</p>
@@ -326,7 +343,7 @@
                             <img src="/src/assets/images/section4/headphones.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col6 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col6 flex  px-5 pt-5 border border-gray-400 bg-white xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div class="pr-1">
                             <h1 class="font-semibold">Laptop & PCs</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 340</p>
@@ -335,7 +352,7 @@
                             <img src="/src/assets/images/section4/laptop.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col7 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col7 flex  px-5 pt-5 border border-gray-400 bg-white xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">Smart phones</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 19</p>
@@ -344,7 +361,7 @@
                             <img src="/src/assets/images/section4/phone2.png" alt="" class="w-14 md:w-20 ">
                         </div>
                     </div>
-                    <div class="col8 flex  px-5 pt-5 border border-gray-400 xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
+                    <div class="col8 flex  px-5 pt-5 border border-gray-400 bg-white xs:hidden sm:hidden md:flex-col-reverse 2xs:hidden">
                         <div>
                             <h1 class="font-semibold">Electric kettle</h1>
                             <p class="text-sm text-gray-400 ">from <br class="xs:hidden sm:hidden md:hidden">USD 240</p>
@@ -354,7 +371,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-5 font-bold border border-gray-400 text-blue-600 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Source now &#8594;</div>
+                <div class="p-5 font-bold border border-gray-400 bg-white text-blue-600 text-xl md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">Source now &#8594;</div>
             </div>
         </section>
 
@@ -390,7 +407,7 @@
         </section>
 
 
-        <section class="mx-24 mt-6 rounded-md  xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-10 2xs:mt-3 2xs:p-0 2xs:bg-none border border-gray-400">
+        <section class="mx-24 mt-6 rounded-md  xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-10 2xs:mt-3 2xs:p-0 2xs:bg-none ">
             <h1 class="text-2xl font-bold">Recommended items</h1>
             <div class="flex flex-wrap gap-5 mt-4">
                 <div class="bg-white px-3 py-2 rounded-md border border-gray-400">
@@ -499,6 +516,187 @@
                 </div>
             </div>
         </section>
+
+        <section class="mx-24 mt-6 rounded-md  xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0 xs:mt-2 sm:mt-2 xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-3 2xs:p-0 2xs:bg-none ">
+            <h1 class="text-2xl font-bold mb-5">Suppliers by region</h1>
+            <div class="flex flex-wrap gap-6">
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/uae.webp" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Arabic Emirates</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/australia.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Australia</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/usa.png" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">United States</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/russia.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Russia</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/itzly.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Italy</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/denmark.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Denmark    </h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex  w-52">
+                    <img src="/src/assets/images/flags/france.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">france</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/ger.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Germany</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/china.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">China</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+                <div class="flex w-52">
+                    <img src="/src/assets/images/flags/britain.jpeg" class="w-20" alt="">
+                    <div class="pl-2">
+                        <h1 class=" font-semibold">Great Britain</h1>
+                        <p class="text-sm text-gray-500">Shopname.ae</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" mt-6 bg-gray-300 xs:mt-2 sm:mt-2 xs:p-0  2xs:mx-0 2xs:mt-3 2xs:p-0  ">
+            <div class="text-center py-10">
+                <h1 class="text-2xl font-bold">Subscribe on our newsletter</h1>
+                <p class="text-gray-600">Get daily news on upcoming offers from many suppliers all over the world</p>
+                <div class="mt-5">
+                    <div class="">
+                        <i class="fa-regular fa-envelope translate-x-8 text-gray-400"></i>
+                        <input 
+                          type="text" 
+                          placeholder="Email" 
+                          class="pl-10 py-2 border border-gray-300 w-72 rounded-md"
+                        />
+                        <button class="bg-blue-600 text-white py-2 px-4 rounded-md ml-1">Subscribe</button>
+                      </div>
+                </div>
+            </div>
+            
+        </section>
     </main>
+    <footer class="bg-white ">
+        <section class="mx-24 rounded-md  xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0  xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-3 2xs:p-0 2xs:bg-none ">
+            <div class="py-10 flex flex-wrap  gap-10">
+                <div>
+                    <div class="flex items-center space-x-4 -mt-1 md:mr-4 sm:mr-10 2xs:mr-10">
+                        <a href="" class="flex items-center text-blue-300 text-3xl font-bold">
+                          <img src="/src/assets/images/logo/logo.png" class="w-12 mr-1" alt="">Brand</a>
+                      </div>
+                      <h1 class="mt-4">Best information about the company Lorem <br>ipsum dolor  sit, amet consectetur adipisicing elit.</h1>
+                      <div class="flex flex-wrap gap-5 mt-4">
+                        <a href="#" class="text-xl text-white bg-gray-400 px-4 py-2 rounded-full"><i class="fa-brands fa-facebook-f "></i></a>
+                        <a href="#" class="text-lg text-white bg-gray-400 px-4 py-2 rounded-full"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-xl text-white bg-gray-400 px-4 py-2 rounded-full"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-xl text-white bg-gray-400 px-4 py-2 rounded-full"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-base text-white bg-gray-400 px-4 py-2 rounded-full"><i class="fa-brands fa-youtube"></i></a>
+                      </div>
+                </div>
+                
+                  <div class="flex flex-wrap gap-10">
+                    <div class="space-y-2">
+                        <h1 class="font-bold text-xl">About</h1>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-500">About Us</a></li>
+                            <li><a href="#" class="text-gray-500">Find store</a></li>
+                            <li><a href="#" class="text-gray-500">Categories</a></li>
+                            <li><a href="#" class="text-gray-500">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-bold text-xl">Partnership</h1>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-500">About Us</a></li>
+                            <li><a href="#" class="text-gray-500">Find store</a></li>
+                            <li><a href="#" class="text-gray-500">Categories</a></li>
+                            <li><a href="#" class="text-gray-500">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-bold text-xl">Information</h1>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-500">Help Center</a></li>
+                            <li><a href="#" class="text-gray-500">Money refund</a></li>
+                            <li><a href="#" class="text-gray-500">Shipping</a></li>
+                            <li><a href="#" class="text-gray-500">Contact Us</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-6">
+                    <div class="space-y-2">
+                        <h1 class="font-bold text-xl">For Users</h1>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-500">Login</a></li>
+                            <li><a href="#" class="text-gray-500">Register</a></li>
+                            <li><a href="#" class="text-gray-500">Settings</a></li>
+                            <li><a href="#" class="text-gray-500">My Orders</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h1 class="font-bold text-xl">Get App</h1>
+                        <div class="space-y-3">
+                            <a href="#" class="flex text-white bg-black gap-2 font-semibold rounded-md shadow-md shadow-gray-800 px-3 py-2"><i class="fa-brands fa-apple pt-1"></i><p>App Store</p></a>
+                            <a href="#" class="flex text-white bg-black gap-2 font-semibold rounded-md shadow-md shadow-gray-800 px-3 py-2"><i class="fa-brands fa-google-play pt-1"></i><p>Play Store</p></a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <section class="bg-gray-300">
+            <div class="mx-24 rounded-md  xl:mx-16 lg:mx-5 md:mx-10 sm:mx-5 xs:mx-0  xs:p-0 xs:bg-none 2xs:mx-0 2xs:mt-3 2xs:p-0 2xs:bg-none py-5">
+                <div class="flex  flex-wrap">
+                    <h1 class="text-gray-500">&copy; 2024 Ecommerce</h1>
+                    <div class="flex pl-96 gap-1  mx-auto  text-gray-500 ">
+                        <img src="/src/assets/images/flags/usa.png" class="w-5 h-4 mt-1.5 " alt="">English 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+      
+        menuToggle.addEventListener('click', () => {
+          menu.classList.toggle('hidden'); // Toggle visibility
+        });
+      </script>
+      
 </body>
 </html>
